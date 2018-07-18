@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app="Calculadora">
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <title>Calculadora</title>
+  <link href="css/arquivo.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+
+<body ng-controller="CalculadoraCtrl">
+    <div class="container">
+        <div class="box">
+  <h3> CALCULADORA
+    <small>Angular</small>
+  </h3>
+
+  <form name="myForm">
+      <div>
+        <div>
+          <input placeholder="Insira um número" id="num1" ng-model="num1">
+        </div>
+        <div>
+          <input placeholder="Insira um número" id="num2" ng-model="num2">
+        </div>
+      </div>
+    </form>
+
+  <select id="appearance-select" name="ope" ng-model="operacao">
+    <option class="alert2" value="" disabled selected>SELECIONE</option>
+    <option class="letra" id="Somar" value="Somar" text-align="center">+</option>
+    <option class="letra" id="Subtrair" value="Subtrair" text-align="center">-</option>
+    <option class="letra" id="Multiplicar" value="Multiplicar" text-align="center">*</option>
+    <option class="letra" id="Dividir" value="Dividir" text-align="center">/</option>
+  </select>
+
+    <br/>
+    <button id="btn" class="alert" ng-click="calcular()">Calcular</button>
+    <br/>
+    <label id="lbl" class="alert2" role="alert" type="text">  {{resultado}}  </label>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="Calculadora.js"></script>
+    <script src="CalculadoraCtrl.js"></script>
+</body>
+</html>
+

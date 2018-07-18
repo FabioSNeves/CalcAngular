@@ -1,0 +1,150 @@
+h3 {
+  font-size: 44px;
+  font-weight: bolder;
+  background-color: rgb(231, 199, 53);
+  color:#FAFFFA;
+  text-align: center;
+  font-family: "Open Sans",sans-serif; 
+  border:solid 1px;
+  border-color: black;
+}
+
+form {
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+  text-align: center
+}
+
+input {
+  padding: 22px 64px;
+  margin: center;
+  background-color: white;
+  align-items: center;
+  align-content: center;
+  box-sizing: border-box;
+  text-align: center;
+  border:solid 1px;
+  border-radius: 10px;
+  border-color: black;
+}
+
+input:hover {
+  background-color: lightgoldenrodyellow;
+}
+
+#appearance-select{
+  width:140px;
+  height: 2em;
+  align-content: center;
+  align-items: center;
+  position: absolute;
+  margin: 0;
+  background-color: steelblue;
+  top: 46%;
+  text-align: center;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border:solid 1px;
+  border-radius: 10px;
+  border-color: black;   
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#appearance-select:hover{
+  background-color: rgb(204, 225, 231);
+}
+
+button {
+  width:140px;
+  height: 2em;
+  position: relative;
+  margin: 0;
+  background: rgb(4, 190, 50);
+  position: absolute;
+  top: 67%;
+  text-align: center;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:solid 1px;  
+  border-radius: 10px;
+  border-color: black;
+}
+
+button:hover{
+  background-color: forestgreen;
+}
+
+label {
+  height: 4em;
+  position: absolute;
+  margin: 2px;
+  background: salmon;
+  width: 538px;
+  top: 80%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);  
+  border:solid 1px;
+  border-radius: 6px;
+  border-color: black;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background:black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 550px;
+  height: 500px;
+  background: white;
+  border-radius: 10px;
+  border-color: black;
+}
+
+.alert {
+ color: white;
+ font-weight: bold;
+ text-align: center;
+ align-content: center;
+ align-items: center;
+ justify-content: center;
+ vertical-align: middle;
+}
+
+.alert2 {
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+ }
+
+.letra {
+ align-content: center;
+ color: black;
+ size: 20px;
+ vertical-align: middle;
+}
