@@ -1,0 +1,63 @@
+<!doctype html>
+<html ng-app="Calculadora">
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Calculadora</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="jumbotron.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+</head>
+
+<body ng-controller="CalculadoraCtrl">
+  <div>
+    <div class="container">
+      <div class="jumbotron">
+        <div class="jumbotron-content">
+          <h1>Calculadora</h1>
+          <p class="jumbotron-lg-only">Angular.</p>
+
+
+          <form class="navbar-form navbar-right" name="myForm" required>
+            <div>
+              <div class="form-group">
+                <input class="form-control" type="number" placeholder="Insira um número" id="num1" ng-model="num1" required>
+              </div>
+              <div>
+                <input class="form-control" type="number" placeholder="Insira um número" id="num2" ng-model="num2" required>
+              </div>
+            </div>
+          </form>
+          <br>
+
+          <select ng-disabled="!num1 || !num2" class="btn btn-default" ng-model="operacao">
+            <option value="" disabled selected>SELECIONE UMA OPERAÇÃO</option>
+            <option id="Somar" value="+" text-align="center">SOMAR</option>
+            <option id="Subtrair" value="-" text-align="center">SUBTRAIR</option>
+            <option id="Multiplicar" value="*" text-align="center">MULTIPLICAR</option>
+            <option id="Dividir" value="/" text-align="center">DIVIDIR</option>
+          </select>
+          <br/>
+
+          <br>
+          <button ng-show="num1 && num2 && operacao" class="btn btn-primary btn-large" ng-click="calcular(num1, num2, operacao)">Calcular</button>
+          <button ng-show="num1 && num2 && operacao" class="btn btn-primary btn-danger" ng-click="apagar(num1, num2, operacao, resultado)">C</button>
+          <br>
+          <br>
+          <label ng-show="num1 && num2 && operacao" type="text">
+            <h2> {{'O resultado de '+ num1 +' '+ operacao +' ' + num2 + ' é: ' + resultado}} </h2>
+          </label>
+
+          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+          <script src="libs/angular/Calculadora.js"></script>
+          <script src="libs/angular/CalculadoraCtrl.js"></script>
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+</body>
+</html>
